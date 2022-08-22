@@ -33,7 +33,7 @@ public class Windowhandling
 	    //*************************************************************
 	    Thread.sleep(2000);
 	    WebElement srch1=driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
-	   
+	    srch1.sendKeys("Samsung refrigirator");
 	    Set<String> ids=driver.getWindowHandles();  
 	    Iterator<String> it=ids.iterator();	    
 	    String parentwindow=it.next();
@@ -42,6 +42,7 @@ public class Windowhandling
 	    System.out.println("child window"+childwindow);    
 	    driver.switchTo().window(childwindow);
 	    Thread.sleep(10000);
+	    srch1.sendKeys("LG refrigirator");
 	    System.out.println(driver.getWindowHandle());
 	  
 	    
